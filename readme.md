@@ -20,11 +20,11 @@ You are welcome to extend the module and make pull requests.
 - name: Install Custom Repository and Key
   hosts: your_target_hosts
   tasks:
-    - name: Run install_apt_key_and_repo Module
+    - name: Add apt key and repository for postgres
       install_apt_key_and_repo:
         key_url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
         repo_url: "http://apt.postgresql.org/pub/repos/apt"
-        distribution_codename: "jammy" # Replace with your distribution's codename
+        distribution_codename: "jammy-pgdg" # Replace with your distribution's codename
 ```
 
 ## Notes

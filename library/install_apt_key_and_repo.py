@@ -31,7 +31,7 @@ def main():
 
     commands = [
         f"curl {key_url} | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/apt.custom_key.gpg >/dev/null",
-        f"sudo sh -c 'echo \"deb {repo_url} {codename} main\" > /etc/apt/sources.list.d/custom_repo.list'",
+        f"sudo sh -c 'echo \"deb {repo_url} {codename} main\" > /etc/apt/sources.list.d/pgdg.list'",
         "sudo apt update"
     ]
 
