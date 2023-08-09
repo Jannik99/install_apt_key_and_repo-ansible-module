@@ -1,6 +1,8 @@
 # Ansible Module: install_apt_key_and_repo
 
-The Ansible module `install_apt_key_and_repo` allows for easy installation of an APT key and addition of an APT repository on a target host. (Only tested on Ubuntu 22 with the repository for PostgreSQL)
+The Ansible module `install_apt_key_and_repo` allows for easy installation of an APT key and addition of an APT repository on a target host.
+This was tested and created on Ubuntu 22 with and for the repository of PostgreSQL. If it works on other repositories thats nice, if not it may or may not be added in future.
+You are welcome to extend the module and make pull requests.
 
 ## Prerequisites
 
