@@ -1,0 +1,9 @@
+---
+- name: Install Custom Repository and Key
+  hosts: localhost
+  tasks:
+    - name: Run install_apt_key_and_repo Module
+      install_apt_key_and_repo:
+        key_url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+        repo_url: "http://apt.postgresql.org/pub/repos/apt"
+        distribution_codename: "jammy" # Replace with your distribution's codename
