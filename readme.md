@@ -13,6 +13,9 @@ You are welcome to extend the module and make pull requests.
 - `key_url`: URL of the APT key to be imported. Required.
 - `repo_url`: URL of the APT repository to be added. Required.
 - `distribution_codename`: The distribution's codename (e.g., `jammy`, `buster`). Required.
+- `repo_name`: The name of the repository to be added. Required.
+
+distributions_codename can be found by running `lsb_release -c` on the target host. It is together with the repo_name needed on the one hand to create the file in `/etc/apt/sources.list.d/` that contains the repository and on the other hand to make the right command e.g. `f"sudo sh -c 'echo \"deb {repo_url} {codename}-{repo_name} main\" > /etc/apt/sources.list.d/{repo_name}.list'"`
 
 ## Example
 
@@ -24,7 +27,8 @@ You are welcome to extend the module and make pull requests.
       install_apt_key_and_repo:
         key_url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
         repo_url: "http://apt.postgresql.org/pub/repos/apt"
-        distribution_codename: "jammy-pgdg" # Replace with your distribution's codename
+        distribution_codename: "jammy" # Replace with your distribution's codename
+        repo-name: "pgdg"
 ```
 
 ## Notes

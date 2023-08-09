@@ -7,3 +7,4 @@
         key_url: "KEY_URL"
         repo_url: "REPO_URL"
         distribution_codename: "jammy" # Replace with your distribution's codename
+        repo_file: "REPO_NAME" # Replace with your repository name

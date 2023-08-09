@@ -28,10 +28,11 @@ def main():
     key_url = module.params['key_url']
     repo_url = module.params['repo_url']
     codename = module.params['distribution_codename']
+    repo_name = module.params['repo_name']
 
     commands = [
         f"curl {key_url} | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/apt.custom_key.gpg >/dev/null",
-        f"sudo sh -c 'echo \"deb {repo_url} {codename} main\" > /etc/apt/sources.list.d/pgdg.list'",
+        f"sudo sh -c 'echo \"deb {repo_url} {codename}-{repo_name} main\" > /etc/apt/sources.list.d/{repo_name}.list'",
         "sudo apt update"
     ]
 
