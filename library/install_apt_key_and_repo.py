@@ -22,6 +22,7 @@ def main():
             key_url=dict(required=True, type='str'),
             repo_url=dict(required=True, type='str'),
             distribution_codename=dict(required=True, type='str'),
+            repo_name = dict(required=True, type='str')
         )
     )
 
